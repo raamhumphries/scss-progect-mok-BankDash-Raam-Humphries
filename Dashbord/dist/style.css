@@ -1,7 +1,74 @@
-body {
-  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@font-face {
+  font-family: "Mont";
+  src: url("../font_mont/Mont-Black.eot");
+  src: local("Mont Black"), local("Mont-Black"), url("../font_mont/Mont-Heavy.eot") format("embedded-opentype"), url("../font_mont/Mont-Heavy.woff2") format("woff2"), url("../font_mont/Mont-Heavy.woff") format("woff"), url("../font_mont/Mont-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
 }
-body h1 {
-  font-family: "Inter", sans-serif;
-  size: 25px;
+:root {
+  --colered_text: rgba(52, 60, 106, 1);
+  --faded_colered_text: rgba(113, 142, 191, 0.7);
+  --faded_white_text: rgba(255, 255, 255, 0.7);
+  --black_text: rgba(35, 35, 35, 1);
+  --white_text: rgba(255, 255, 255, 1);
+  --background-color: rgba(230, 239, 245, 1);
+  --blue_tab: rgba(45, 96, 255, 1);
+  --gray_tab: rgba(177, 177, 177, 1);
+  --primary-font: "Inter", sans-serif;
+  --blue_card_background: linear-gradient(107.38deg, #4C49ED 2.61%, #0A06F4 101.2%);
+  --blue_card_background_faded: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+  --white_card_background: rgba(255, 255, 255, 1);
+  --white_card_border: 1px solid rgba(223, 234, 242, 1)
+  --blue_transaction: rgba(24, 20, 243, 1);
+  --faded_transaction:rgba(113, 142, 191, 1);
+}
+
+h1 {
+  font-family: "Mont", sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 31.95px;
+  text-align: left;
+}
+
+.page_title {
+  font-family: var(--primary-font);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.89px;
+  text-align: left;
+}
+
+.card {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  text-align: left;
+}
+.card ._title {
+  font-family: var(--primary-font);
+  font-size: 22px;
+  line-height: 26.63px;
+}
+.card ._text {
+  font-size: 15px;
+  line-height: 18px;
+}
+.card ._faded_text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+}
+.card ._nam_text {
+  font-size: 20px;
+  line-height: 24px;
+}
+.card ._date {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.bold_text {
+  font-weight: 900;
 }
