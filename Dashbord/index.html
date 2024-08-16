@@ -1,13 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashbord</title>
-    <link rel="stylesheet" href="./dist/style.css">
-</head>
-<body>
-    <h1 >BankDash.</h1>
-    
-</body>
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
+
+  <body>
+    <aside>
+      <h1>
+        <img
+          src="../icons/iconfinder_vector_65_09_473792 1.svg"
+          alt=" website logo"
+        />
+        BankDash.
+      </h1>
+      <nav class="tab">
+        <img src="../icons/home 2.svg" alt="home icon" />
+        <a href="./index.html">Dashboard</a>
+      </nav>
+      <nav class="tab">
+        <img src="../icons/transfer 1.svg" alt="Transactions icon" />
+
+        <a href="../Transactions/transactions.html" target="_blank"
+          >Transactions</a
+        >
+      </nav>
+      <nav class="tab">
+        <img src="../icons/user 3 1.svg" alt="Accounts icon" />
+
+        <a href="../Accounts/accounts.html" target="_blank">Accounts</a>
+      </nav>
+    </aside>
+    <header>
+      <span class="page_title">Overview</span>
+      <div class="alined_right">
+        <form role="search" class="search-container">
+          <i class="search-icon"
+            ><img src="../icons/Vector.svg" alt="search icon"
+          /></i>
+          <input
+            type="search"
+            placeholder="Search for something"
+            class="search-input"
+          />
+        </form>
+        <div class="circle background">
+          <img src="../icons/settings 1.svg" alt="setings icon" />
+        </div>
+        <div class="circle background">
+          <img src="../icons/002-notification-1.svg" alt="notification icon" />
+        </div>
+        <img src="../icons/Mask Group.svg" alt="user image" class="circle" />
+      </div>
+    </header>
+    <main>
+      <div class="cards_text_box">
+        <div class="cards_title_line">
+          <span class="card_title">my cards</span><span>See All</span>
+        </div>
+        <div class="cards_aligned">
+          <div class="card card_blue">
+            <div class="card-balance">
+              <div>
+                <span class="card_text">Balance </span>
+                <br />
+                <span class="card_nam_text">$5,756</span>
+              </div>
+              <img
+                src="../icons/Chip_Card_white.svg"
+                alt="icon of credit card
+            chip"
+              />
+            </div>
+            <div class="card-balance">
+              <div>
+                <span class="card_faded_text">CARD HOLDER </span>
+                <br />
+                <span class="card_text">Eddy Cusuma</span>
+              </div>
+
+              <div class="card_second_row">
+                <div>
+                  <span class="card_faded_text">VALID THRU </span>
+                  <br />
+                  <span class="card_date">12/22</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-number">
+              <div>3778 **** **** 1234</div>
+              <img src="../icons/Group 17.svg" alt="credit card simble" />
+            </div>
+            <div class="card-chip"></div>
+          </div>
+          <div class="card card_white">
+            <div class="card-balance">
+              <div>
+                <span class="card_text">Balance </span>
+                <br />
+                <span class="card_nam_text">$5,756</span>
+              </div>
+              <img
+                src="../icons/Chip_Card.svg"
+                alt="icon of credit card
+            chip"
+              />
+            </div>
+            <div class="card-balance">
+              <div>
+                <span class="card_faded_text">CARD HOLDER </span>
+                <br />
+                <span class="card_text">Eddy Cusuma</span>
+              </div>
+
+              <div class="card_second_row">
+                <div>
+                  <span class="card_faded_text">VALID THRU </span>
+                  <br />
+                  <span class="card_date">12/22</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-number">
+              <div>3778 **** **** 1234</div>
+              <img src="../icons/Group 17 gray.svg" alt="credit card simble" />
+            </div>
+            <div class="card-chip"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards_text_box">
+        <div class="cards_title_line">
+          <span class="card_title"> Recent Transaction</span>
+        </div>
+       
+        <div class="card card_white">
+          <div class="transaction_line">
+            <img src="../icons/Group 313.svg" alt="icon deposite" />
+
+            <span>
+              <span class="card_text">Deposit from my Card </span>
+              <br />
+              <span class="card_faded_text">28 January 2021</span>
+            </span>
+            <span class="card_nam_text red">-$850</span>
+          </div>
+          <div class="transaction_line">
+            <img src="../icons/Group 314.svg" alt="icon Paypal" />
+
+            <span>
+              <span class="card_text">Deposit Paypal </span>
+              <br />
+              <span class="card_faded_text">25 January 2021</span>
+            </span>
+            <span class="card_nam_text green">+$2,500</span>
+          </div>
+          <div class="transaction_line">
+            <img src="../icons/Group 315.svg" alt="icon dolar sine in a circle" />
+
+            <span>
+              <span class="card_text">Jemi Wilson </span>
+              <br />
+              <span class="card_faded_text">21 January 2021</span>
+            </span>
+            <span class="card_nam_text green">+$5,400</span>
+          </div>
+        </div>
+     
+      </div>
+      
+      <div class="cards_text_box">
+        <div class="cards_title_line">
+          <span class="card_title"> Weekly Activity</span>
+        </div>
+       
+        <div class="card card_white">
+          
+          <img src="../icons/Rectangle 24.svg" alt="bar chart">
+          
+        </div>
+     
+      </div>
+    </main>
+  </body>
 </html>

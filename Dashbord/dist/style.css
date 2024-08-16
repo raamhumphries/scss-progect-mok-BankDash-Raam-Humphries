@@ -8,67 +8,251 @@
   font-style: normal;
 }
 :root {
-  --colered_text: rgba(52, 60, 106, 1);
+  --Primary3: rgba(45, 96, 255, 1);
+  --Primary2: rgba(52, 60, 106, 1);
   --faded_colered_text: rgba(113, 142, 191, 0.7);
   --faded_white_text: rgba(255, 255, 255, 0.7);
   --black_text: rgba(35, 35, 35, 1);
-  --white_text: rgba(255, 255, 255, 1);
   --background-color: rgba(230, 239, 245, 1);
-  --blue_tab: rgba(45, 96, 255, 1);
   --gray_tab: rgba(177, 177, 177, 1);
-  --primary-font: "Inter", sans-serif;
-  --blue_card_background: linear-gradient(107.38deg, #4C49ED 2.61%, #0A06F4 101.2%);
-  --blue_card_background_faded: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
-  --white_card_background: rgba(255, 255, 255, 1);
-  --white_card_border: 1px solid rgba(223, 234, 242, 1)
+  --search_background: rgba(245, 247, 250, 1);
+  --blue_card_background: linear-gradient(
+    107.38deg,
+    #4c49ed 2.61%,
+    #0a06f4 101.2%
+  );
+  --blue_card_background_faded: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  --white_card_background: rgba(223, 234, 242, 1);
+  --white_card_border: 1px solid rgba(223, 234, 242, 1);
   --blue_transaction: rgba(24, 20, 243, 1);
-  --faded_transaction:rgba(113, 142, 191, 1);
+  --faded_transaction: rgba(113, 142, 191, 1);
+  --primary-font: "Inter", sans-serif;
+  --red: rgba(255, 75, 74, 1);
+  --green: rgba(65, 212, 168, 1);
 }
 
-h1 {
+body {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+body header {
+  width: 75%;
+  align-self: start;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .alined_right {
+  justify-content: flex-end;
+  align-items: center;
+  width: 60%;
+  display: flex;
+}
+body header .search-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: var(--search_background);
+  border-radius: 20px;
+  padding: 8px 16px;
+  max-width: 300px;
+  align-self: center;
+  height: 18px;
+  margin-left: 10%;
+}
+body header .search-container .search-input {
+  border: none;
+  background: transparent;
+  flex-grow: 1;
+  font-size: 16px;
+  outline: none;
+}
+body header .search-container .search-input::placeholder {
+  color: var(--gray_tab);
+}
+body header .search-container .search-icon {
+  color: var(--gray_tab);
+  font-size: 18px;
+  margin-right: 10px;
+}
+body header .search-icon {
+  color: var(--gray_tab);
+  font-size: 18px;
+  margin-right: 10px;
+}
+body .page_title {
+  font-family: var(--primary-font);
+  font-size: 28px;
+  font-weight: 600;
+}
+body aside {
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 3px solid var(--gray_tab);
+}
+body h1 {
   font-family: "Mont", sans-serif;
   font-size: 25px;
   font-weight: 900;
   line-height: 31.95px;
   text-align: left;
 }
-
-.page_title {
+body .tab {
+  padding: 5% 5%;
+  margin-left: 10%;
   font-family: var(--primary-font);
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 33.89px;
+  font-size: 18px;
+  font-weight: 500;
   text-align: left;
+  color: var(--gray_tab);
 }
-
-.card {
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
+body .tab a {
+  text-decoration: none;
+  color: var(--gray_tab);
+}
+body .tab img {
+  filter: grayscale(100%);
+}
+body .tab:hover {
+  border-left: 6px solid var(--Primary3);
+}
+body .tab:hover a {
+  text-decoration: none;
+  color: var(--Primary3);
+}
+body .tab:hover img {
+  filter: grayscale(0);
+  filter: invert(43%) sepia(89%) saturate(2500%) hue-rotate(188deg) brightness(90%) contrast(100%);
+}
+body .bold_text {
+  font-weight: 900;
+}
+body .circle {
+  border-radius: 100%;
+  margin-left: 5%;
+  justify-content: space-between;
+}
+body .circle .USERPHOTO {
+  width: auto;
+  height: 70px;
+}
+body .background {
+  width: 30px;
+  height: 30px;
+  background: var(--search_background);
+  padding: 10px 10px 10px 10px;
+}
+body .card_blue {
+  background: var(--blue_card_background);
+  color: var(--white_card_background);
+}
+body .card_white {
+  background: var(--white_card_background);
+  color: var(--black_text);
+}
+body .cards_text_box {
+  border: #232323 solid 1px;
+  padding: 10px;
+}
+body .cards_text_box .cards_aligned {
+  display: flex;
+}
+body .cards_text_box .card_title {
   text-align: left;
-}
-.card ._title {
+  width: 80%;
   font-family: var(--primary-font);
   font-size: 22px;
   line-height: 26.63px;
 }
-.card ._text {
+body .cards_text_box .cards_title_line {
+  display: flex;
+  justify-content: space-between;
+}
+body .card_text {
   font-size: 15px;
   line-height: 18px;
 }
-.card ._faded_text {
+body .card_faded_text {
+  font-family: Lato;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.4px;
+  text-align: left;
 }
-.card ._nam_text {
+body .card_nam_text {
   font-size: 20px;
   line-height: 24px;
 }
-.card ._date {
+body .card_date {
   font-size: 15px;
   line-height: 18px;
 }
-
-.bold_text {
-  font-weight: 900;
+body .card {
+  margin: 1%;
+  width: 300px;
+  height: 180px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  flex: 1;
+}
+body .card-balance {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+body .transaction_line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+body .card_second_row {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+body .card-number {
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+  height: 70px;
+  align-items: center;
+  text-align: center;
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26.4px;
+  background: var(--blue_card_background_faded);
+  padding: 20px;
+  border-radius: 10px;
+}
+body main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--search_background);
+}
+body .red {
+  color: var(--red);
+}
+body .green {
+  color: var(--green);
 }

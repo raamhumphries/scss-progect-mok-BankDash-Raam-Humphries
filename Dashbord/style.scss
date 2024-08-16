@@ -13,67 +13,279 @@
   font-weight: 900;
   font-style: normal;
 }
+// htmi{                                 כדי לעבור לREM צריך להוריד את הפונט סייז של האתר
+//   font-size:1px;
+// }
 :root {
-  --colered_text: rgba(52, 60, 106, 1);
+  --Primary3: rgba(45, 96, 255, 1);
+  --Primary2: rgba(52, 60, 106, 1);
   --faded_colered_text: rgba(113, 142, 191, 0.7);
   --faded_white_text: rgba(255, 255, 255, 0.7);
   --black_text: rgba(35, 35, 35, 1);
-  --white_text: rgba(255, 255, 255, 1);
   --background-color: rgba(230, 239, 245, 1);
-  --blue_tab: rgba(45, 96, 255, 1);
   --gray_tab: rgba(177, 177, 177, 1);
+  --search_background: rgba(245, 247, 250, 1);
+  --blue_card_background: linear-gradient(
+    107.38deg,
+    #4c49ed 2.61%,
+    #0a06f4 101.2%
+  );
+  --blue_card_background_faded: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  --white_card_background: rgba(223, 234, 242, 1);
+  --white_card_border: 1px solid rgba(223, 234, 242, 1);
+  --blue_transaction: rgba(24, 20, 243, 1);
+  --faded_transaction: rgba(113, 142, 191, 1);
   --primary-font: "Inter", sans-serif;
-  --blue_card_background: linear-gradient(107.38deg, #4C49ED 2.61%, #0A06F4 101.2%);
-  --blue_card_background_faded: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
---white_card_background: rgba(255, 255, 255, 1);
---white_card_border: 1px solid rgba(223, 234, 242, 1)
---blue_transaction: rgba(24, 20, 243, 1);
---faded_transaction:rgba(113, 142, 191, 1);
-
+  --red: rgba(255, 75, 74, 1);
+  --green: rgba(65, 212, 168, 1);
 }
-h1 {
-  font-family: "Mont", sans-serif;
 
-  font-size: 25px;
-  font-weight: 900;
-  line-height: 31.95px;
-  text-align: left;
-}
-.page_title {
-  font-family: var(--primary-font);
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 33.89px;
-  text-align: left;
-}
-.card {
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  text-align: left;
+body {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin-right: 10%;
+  margin-top: 3%;
+  header {
+    width: 75%;
+    align-self: start;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .alined_right {
+      justify-content: flex-end;
+      align-items: center;
+      width: 60%;
+      display: flex;
+    }
+    .search-container {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background: var(--search_background);
+      border-radius: 20px;
+      padding: 8px 16px;
+      max-width: 300px;
+      align-self: center;
+      // width: 152px;
+      height: 18px;
+      // top: 41px;
+      // left: 950px;
+      margin-left: 10%;
 
-  ._title {
-    font-family: var(--primary-font);
-    font-size: 22px;
-    line-height: 26.63px;
+      .search-input {
+        border: none;
+        background: transparent;
+        flex-grow: 1;
+        font-size: 16px;
+        outline: none;
+
+        &::placeholder {
+          color: var(--gray_tab);
+        }
+      }
+
+      .search-icon {
+        color: var(--gray_tab);
+        font-size: 18px;
+
+        margin-right: 10px;
+      }
+    }
+
+    .search-icon {
+      color: var(--gray_tab);
+      font-size: 18px;
+
+      margin-right: 10px;
+    }
   }
-  ._text {
+
+  .page_title {
+    font-family: var(--primary-font);
+    font-size: 28px;
+    font-weight: 600;
+  }
+  aside {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    border-right: 3px solid var(--gray_tab);
+  }
+  h1 {
+    font-family: "Mont", sans-serif;
+
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 31.95px;
+    text-align: left;
+  }
+  .tab {
+    padding: 5% 5%;
+    margin-left: 10%;
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: 500;
+
+    text-align: left;
+    color: var(--gray_tab);
+
+    a {
+      text-decoration: none;
+      color: var(--gray_tab);
+    }
+    img {
+      filter: grayscale(100%);
+    }
+
+    &:hover {
+      a {
+        text-decoration: none;
+        color: var(--Primary3);
+      }
+      img {
+        filter: grayscale(0);
+        filter: invert(43%) sepia(89%) saturate(2500%) hue-rotate(188deg)
+          brightness(90%) contrast(100%);
+      }
+      border-left: 6px solid var(--Primary3);
+    }
+  }
+
+  .bold_text {
+    font-weight: 900;
+  }
+  .circle {
+    border-radius: 100%;
+    margin-left: 5%;
+    justify-content: space-between;
+
+    .USERPHOTO {
+      width: auto;
+      height: 70px;
+    }
+  }
+  .background {
+    width: 30px;
+    height: 30px;
+    background: var(--search_background);
+    padding: 10px 10px 10px 10px;
+  }
+
+  .card_blue {
+    background: var(--blue_card_background);
+    color: var(--white_card_background);
+  }
+  .card_white {
+    background: var(--white_card_background);
+    color: var(--black_text);
+  }
+  .cards_text_box {
+    border: rgba(35, 35, 35, 1) solid 1px;
+    padding: 10px;
+    .cards_aligned {
+      display: flex;
+    }
+    .card_title {
+      text-align: left;
+      width: 80%;
+      font-family: var(--primary-font);
+      font-size: 22px;
+      line-height: 26.63px;
+    }
+    .cards_title_line {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .card_text {
     font-size: 15px;
     line-height: 18px;
   }
-  ._faded_text {
+  .card_faded_text {
+    font-family: Lato;
     font-size: 12px;
     font-weight: 400;
     line-height: 14.4px;
+    text-align: left;
   }
-  ._nam_text {
+  .card_nam_text {
     font-size: 20px;
     line-height: 24px;
   }
-  ._date {
+  .card_date {
     font-size: 15px;
     line-height: 18px;
   }
-}
-.bold_text {
-  font-weight: 900;
+  .card {
+    margin: 1%;
+    width: 300px;
+    height: 180px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    flex: 1;
+  }
+
+  .card-balance {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+  }
+  .transaction_line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+   
+  }
+  .card_second_row {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+  }
+
+  .card-number {
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    height: 70px;
+    align-items: center;
+    text-align: center;
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.4px;
+    background: var(--blue_card_background_faded);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--search_background);
+  }
+  .red {
+    color: var(--red);
+  }
+  .green {
+    color: var(--green);
+  }
 }
