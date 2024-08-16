@@ -288,4 +288,11 @@ body {
   .green {
     color: var(--green);
   }
+  // a chart y index with a background image and a dascriptian of the image using aria-label
+  .chart{
+   align-content: center;
+   width: 100%;
+   height: 100%;
+   padding: none;
+  }
 }
